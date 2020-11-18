@@ -5,7 +5,7 @@ This project is a forever going app that gathers utilities from my daily activit
 
 1. Clone repository
 1. `yarn install`
-1. `yarn dev`
+1. `yarn dev -i=someWord -i=someOtherWord --path '../../uploads/model.csv'`
 
 ## Build
 When building a folder `dist` will be created in the root of the project.
@@ -16,6 +16,12 @@ Run:
 Now you can CD to the dist folder and run:
 
 `node .`
+
+Passing args:
+
+`node . -i=someWord -i=someOtherWord --path '../../uploads/myfile.csv'`
+
+
 
 ## Reading csv
 Please place your csv file on the uploads folder.
