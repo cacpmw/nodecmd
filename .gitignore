@@ -5,3 +5,4 @@
 /uploads/*
 !uploads/.gitkeep
 .DS_Store
+yarn-error.log
