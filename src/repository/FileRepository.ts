@@ -4,9 +4,12 @@ import path from 'path';
 
 async function lookupLines(
   includes: string[] = [],
-  filePath: string,
+  filenameWithExtension: string,
 ): Promise<string[]> {
-  const dirPath = path.resolve(__dirname, filePath);
+  const dirPath = path.resolve(
+    __dirname,
+    `../../uploads/${filenameWithExtension}`,
+  );
   const records: string[] = [];
   const readLineInterface = readline.createInterface({
     input: fs.createReadStream(dirPath),
