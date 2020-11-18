@@ -1,5 +1,5 @@
 # NodeJS CMD
-This project is a forever going project that gathers utilities from my daily activities. It is meant to run on terminal.
+This project is a forever going app that gathers utilities from my daily activities. It is meant to run on terminal.
 
 ## Setup
 
