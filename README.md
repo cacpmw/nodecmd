@@ -16,3 +16,7 @@ Run:
 Now you can CD to the dist folder and run:
 
 `node .`
+
+## Reading csv
+Please place your csv file on the uploads folder.
+Then change the includes array to reflect what you are looking for.
