@@ -13,10 +13,10 @@ async function lookupLines(includes: string[] = [], filePath: string): Promise<s
 
     readLineInterface.on('line', async (line) => {
         includes.some(sub => {
-            if (line.includes(sub)) {
+            if (line.toLowerCase().includes(sub.toLowerCase())) {
                 records.push(line);
             }
-        })
+        });
 
     });
 
@@ -24,4 +24,18 @@ async function lookupLines(includes: string[] = [], filePath: string): Promise<s
     return records;
 }
 
-export { lookupLines };
+async function writeLines(lines: string[]): Promise<void> {
+    const filename = `${Date.now()}-dump.csv`;
+    const dirPath = path.resolve(__dirname, `../../dumps/${filename}`);
+    const writer = fs.createWriteStream(dirPath, {
+        flags: 'w+'
+    });
+    const newLine = "\r\n";
+    lines.forEach(line => {
+        writer.write(`${line}${newLine}`);
+    });
+    writer.end();
+    return;
+}
+
+export { lookupLines, writeLines };

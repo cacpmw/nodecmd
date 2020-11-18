@@ -1,2 +1,7 @@
 /node_modules
 /dist
+/dumps/*
+!/dumps/.gitkeep
+/uploads/*
+!uploads/.gitkeep
+.DS_Store
